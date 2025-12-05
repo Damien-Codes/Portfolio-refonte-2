@@ -4,7 +4,48 @@ document.addEventListener('DOMContentLoaded', function () {
     const certificationCards = document.querySelectorAll('.certification-card-full');
     const countElement = document.getElementById('count');
 
-    // Filter functionality
+    // Function to apply the filter logic
+    function applyFilter(filterValue) {
+        let visibleCount = 0;
+
+        // Filter certifications
+        certificationCards.forEach(card => {
+            if (filterValue === 'all') { // LOGIC for "Diplômes & Certifications"
+                card.classList.remove('hidden');
+                card.style.animation = 'fadeInUp 0.5s ease forwards';
+                visibleCount++;
+            }
+            else {
+                const categories = card.getAttribute('data-category');
+                // The logic now applies only to the technical filters (web, mobile, etc.)
+                if (categories && categories.includes(filterValue)) {
+                    card.classList.remove('hidden');
+                    // Add animation
+                    card.style.animation = 'fadeInUp 0.5s ease forwards';
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                }
+            }
+        });
+
+        // Update count
+        if (countElement) {
+            countElement.textContent = visibleCount;
+            const textPlural = visibleCount > 1 ? 'éléments trouvés' : 'élément trouvé';
+            // Find the text node after the span
+            let textNode = countElement.nextSibling;
+            if (textNode && textNode.nodeType === 3) {
+                textNode.textContent = ' ' + textPlural;
+            } else {
+                // Fallback in case the structure is different
+                countElement.insertAdjacentText('afterend', ' ' + textPlural);
+            }
+        }
+    }
+
+
+    // Filter functionality (Click listener)
     filterButtons.forEach(button => {
         button.addEventListener('click', function () {
             // Remove active class from all buttons
@@ -15,34 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Get filter value
             const filterValue = this.getAttribute('data-filter');
-
-            let visibleCount = 0;
-
-            // Filter certifications
-            certificationCards.forEach(card => {
-                if (filterValue === 'all') {
-                    card.classList.remove('hidden');
-                    // Add animation
-                    card.style.animation = 'fadeInUp 0.5s ease forwards';
-                    visibleCount++;
-                } else {
-                    const categories = card.getAttribute('data-category');
-                    if (categories && categories.includes(filterValue)) {
-                        card.classList.remove('hidden');
-                        card.style.animation = 'fadeInUp 0.5s ease forwards';
-                        visibleCount++;
-                    } else {
-                        card.classList.add('hidden');
-                    }
-                }
-            });
-
-            // Update count
-            if (countElement) {
-                countElement.textContent = visibleCount;
-            }
+            applyFilter(filterValue);
         });
     });
+
+    // Apply initial filter on page load (now applies 'all' which is the default active button)
+    const initialActiveButton = document.querySelector('.filter-btn.active');
+    if (initialActiveButton) {
+        applyFilter(initialActiveButton.getAttribute('data-filter'));
+    }
 
     // Smooth scroll for anchor links
     const certLinks = document.querySelectorAll('a[href^="#cert-"]');
@@ -53,13 +75,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                // Show all certifications first
+                // We click 'all' first to ensure the card is visible and all filters are reset
                 const allButton = document.querySelector('.filter-btn[data-filter="all"]');
                 if (allButton) {
                     allButton.click();
                 }
 
-                // Scroll to target
+                // Scroll to target (no need for a second filter click, as 'all' shows the target)
                 setTimeout(() => {
                     targetElement.scrollIntoView({
                         behavior: 'smooth',

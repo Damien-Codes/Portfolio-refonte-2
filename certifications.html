@@ -18,12 +18,12 @@
 
     <header id="header">
         <nav class="container">
-            <a href="index.html" class="logo">Damien PINO</a>
+            <a href="index.html" class="logo">Portfolio</a>
             <ul class="nav-links">
                 <li><a href="index.html#about">À Propos</a></li>
                 <li><a href="index.html#projects">Projets</a></li>
-                <li><a href="index.html#experience">Expérience</a></li>
-                <li><a href="certifications.html" class="active">Certifications</a></li>
+                <li><a href="index.html#experience">Parcours</a></li>
+                <li><a href="index.html#certifications" class="active">Certifications</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -42,11 +42,10 @@
     <section id="certifications-page">
         <div class="container">
 
-            <!-- Filters -->
             <div class="filters-container">
                 <div class="filters-group">
                     <button class="filter-btn active" data-filter="all">
-                        <i class="fas fa-th"></i> Tout afficher
+                        <i class="fas fa-list"></i> Tout Afficher
                     </button>
                     <button class="filter-btn" data-filter="web">
                         <i class="fas fa-globe"></i> Développement Web
@@ -60,19 +59,23 @@
                     <button class="filter-btn" data-filter="fullstack">
                         <i class="fas fa-layer-group"></i> Full Stack
                     </button>
+                    <button class="filter-btn" data-filter="cybersecurity">
+                        <i class="fas fa-shield-alt"></i> Cybersécurité
+                    </button>
+                    <button class="filter-btn" data-filter="finance">
+                        <i class="fas fa-chart-line"></i> Finance
+                    </button>
                 </div>
                 <div class="results-count">
-                    <span id="count">6</span> certifications trouvées
+                    <span id="count">6</span> éléments trouvés
                 </div>
             </div>
 
-            <!-- Certifications Grid -->
             <div class="all-certifications-grid">
 
-                <!-- Certification 1 -->
-                <article class="certification-card-full" id="cert-1" data-category="web mobile fullstack">
-                    <div class="certification-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                <article class="certification-card-full" id="cert-1" data-category="diplome web mobile fullstack">
+                    <div class="certification-icon fullstack-icon">
+                        <i class="fas fa-layer-group"></i>
                     </div>
                     <div class="certification-content">
                         <h3>Bachelors Développeur Solutions Web et Mobile</h3>
@@ -96,10 +99,9 @@
                     </div>
                 </article>
 
-                <!-- Certification 2 -->
-                <article class="certification-card-full" id="cert-2" data-category="web backend fullstack">
-                    <div class="certification-icon">
-                        <i class="fas fa-code"></i>
+                <article class="certification-card-full" id="cert-2" data-category="diplome web backend fullstack">
+                    <div class="certification-icon fullstack-icon">
+                        <i class="fas fa-layer-group"></i>
                     </div>
                     <div class="certification-content">
                         <h3>Bachelors Concepteur Développeur d'Application</h3>
@@ -122,22 +124,21 @@
                     </div>
                 </article>
 
-                <!-- Certification 3 -->
-                <article class="certification-card-full" id="cert-3" data-category="web backend">
-                    <div class="certification-icon">
-                        <i class="fas fa-laptop-code"></i>
+                <article class="certification-card-full" id="cert-3" data-category="diplome backend cybersecurity">
+                    <div class="certification-icon cybersecurity-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>BTS Services Informatiques aux Organisations</h3>
+                        <h3>BTS Services Informatiques aux Organisations (Option Cybersécurité)</h3>
                         <p class="certification-school">Lycée Parc de Vilgenis - Massy</p>
                         <p class="certification-description">Formation fondamentale en développement logiciel avec
-                            spécialisation SLAM (Solutions Logicielles et Applications Métiers). Apprentissage des bases
-                            de la programmation et des systèmes d'information.</p>
+                            spécialisation SLAM (Solutions Logicielles et Applications Métiers) et initiation à la
+                            sécurité des systèmes d'information.</p>
                         <div class="tags">
-                            <span class="tag">HTML/CSS</span>
-                            <span class="tag">JavaScript</span>
+                            <span class="tag">Sécurité</span>
                             <span class="tag">Python</span>
                             <span class="tag">SQL</span>
+                            <span class="tag">Réseaux</span>
                             <span class="tag">Git</span>
                         </div>
                         <div class="certification-footer">
@@ -147,10 +148,9 @@
                     </div>
                 </article>
 
-                <!-- Certification 4 - Additional -->
-                <article class="certification-card-full" data-category="web">
-                    <div class="certification-icon">
-                        <i class="fas fa-certificate"></i>
+                <article class="certification-card-full" data-category="certification web">
+                    <div class="certification-icon web-icon">
+                        <i class="fas fa-globe"></i>
                     </div>
                     <div class="certification-content">
                         <h3>Certification JavaScript Avancé</h3>
@@ -170,49 +170,28 @@
                     </div>
                 </article>
 
-                <!-- Certification 5 - Additional -->
-                <article class="certification-card-full" data-category="backend">
-                    <div class="certification-icon">
-                        <i class="fas fa-database"></i>
+                <article class="certification-card-full" data-category="certification backend finance">
+                    <div class="certification-icon finance-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>Certification Base de Données & SQL</h3>
-                        <p class="certification-school">Formation en ligne - OpenClassrooms</p>
-                        <p class="certification-description">Conception et gestion de bases de données relationnelles,
-                            optimisation des requêtes SQL, normalisation et indexation pour des performances optimales.
-                        </p>
+                        <h3>NFT pour les Débutants : Devenir Investisseur et Créateur NFT</h3>
+                        <p class="certification-school">Udemy - Clara L.</p>
+                        <p class="certification-description">Formation approfondie sur la création, l'acquisition et
+                            l'investissement
+                            dans les jetons non fongibles (NFT). Couvre l'analyse du marché, les plateformes d'échange
+                            et les
+                            stratégies de portefeuille dans l'écosystème du Web3.</p>
                         <div class="tags">
-                            <span class="tag">SQL</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">PostgreSQL</span>
-                            <span class="tag">MongoDB</span>
+                            <span class="tag">NFT</span>
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Crypto</span>
+                            <span class="tag">Web3</span>
                         </div>
                         <div class="certification-footer">
-                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
-                            <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Certification 6 - Additional -->
-                <article class="certification-card-full" data-category="mobile">
-                    <div class="certification-icon">
-                        <i class="fas fa-mobile"></i>
-                    </div>
-                    <div class="certification-content">
-                        <h3>Certification Développement Mobile React Native</h3>
-                        <p class="certification-school">Formation en ligne - Udemy</p>
-                        <p class="certification-description">Développement d'applications mobiles cross-platform avec
-                            React Native, gestion d'état avec Redux, navigation et intégration d'API natives.</p>
-                        <div class="tags">
-                            <span class="tag">React Native</span>
-                            <span class="tag">Redux</span>
-                            <span class="tag">Expo</span>
-                            <span class="tag">iOS/Android</span>
-                        </div>
-                        <div class="certification-footer">
-                            <span class="certification-year"><i class="fas fa-calendar"></i> 2024</span>
-                            <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            <span class="certification-year"><i class="fas fa-calendar"></i> Août 2023</span>
+                            <a href="/Assets/Certificates/Udemy/PDF/NFT pour les débutants.pdf" target="_blank"><span
+                                    class="certification-level"><i class="fas fa-award"></i> Certification</span></a>
                         </div>
                     </div>
                 </article>

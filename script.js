@@ -42,41 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* --- GESTION DES PROJETS SECONDAIRES --- */
 
-    const allProjectsSection = document.getElementById('all-projects');
-    const voirTousButton = document.querySelector('.cta-voir-plus .btn');
-    const separator = document.querySelector('.separator-project');
+    const moreProjects = document.getElementById('more-projects');
+    const showMoreBtn = document.getElementById('show-more-btn');
 
-    // 1. Masquer la section des projets secondaires au chargement
-    if (allProjectsSection) {
-        allProjectsSection.classList.add('hidden');
-    }
-    if (separator) {
-        separator.classList.add('hidden');
-    }
-
-    // 2. Écouteur d'événement sur le bouton "Voir Tous Mes Projets"
-    if (voirTousButton && allProjectsSection) {
-        voirTousButton.addEventListener('click', (e) => {
+    if (moreProjects && showMoreBtn) {
+        showMoreBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            moreProjects.classList.toggle('visible');
 
-            if (allProjectsSection.classList.contains('hidden')) {
-                allProjectsSection.classList.remove('hidden');
-                separator.classList.remove('hidden');
-                voirTousButton.textContent = 'Masquer les autres projets';
-
-                allProjectsSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+            if (moreProjects.classList.contains('visible')) {
+                showMoreBtn.innerHTML = '<i class="fas fa-minus"></i> Voir moins';
             } else {
-                allProjectsSection.classList.add('hidden');
-                separator.classList.add('hidden');
-                voirTousButton.textContent = 'Voir Tous Mes Projets';
-
-                document.getElementById('projects').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                showMoreBtn.innerHTML = '<i class="fas fa-plus"></i> Voir plus de projets';
+                // Optionnel : remonter légèrement si on ferme
+                document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
             }
         });
     }
@@ -112,6 +91,53 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleCertsButton.textContent = 'Voir 1+ autres Certifications'; // Rétablissement du texte
             }
         });
+    }
+
+    /* --- GESTION DU PARCOURS (SWITCH) --- */
+    const timelineToggle = document.getElementById('timeline-toggle');
+    const timelinePro = document.getElementById('timeline-pro');
+    const timelineAcademic = document.getElementById('timeline-academic');
+    const labelPro = document.getElementById('label-pro');
+    const labelAcademic = document.getElementById('label-academic');
+
+    // Fonction pour changer manuellement via les labels
+    window.setTimeline = (type) => { // Attached to window for HTML onclick access
+        if (type === 'pro') {
+            if (timelineToggle) timelineToggle.checked = false;
+            updateTimelineDisplay(false);
+        } else {
+            if (timelineToggle) timelineToggle.checked = true;
+            updateTimelineDisplay(true);
+        }
+    };
+
+    // Fonction pour le switch
+    window.toggleTimeline = () => {
+        // managed by label/input connection or change event
+    };
+
+    if (timelineToggle) {
+        timelineToggle.addEventListener('change', (e) => {
+            updateTimelineDisplay(e.target.checked);
+        });
+    }
+
+    function updateTimelineDisplay(isAcademic) {
+        if (isAcademic) {
+            // Afficher Académique
+            if (timelinePro) timelinePro.classList.add('hidden');
+            if (timelineAcademic) timelineAcademic.classList.remove('hidden');
+
+            if (labelPro) labelPro.classList.remove('active');
+            if (labelAcademic) labelAcademic.classList.add('active');
+        } else {
+            // Afficher Professionnel
+            if (timelineAcademic) timelineAcademic.classList.add('hidden');
+            if (timelinePro) timelinePro.classList.remove('hidden');
+
+            if (labelAcademic) labelAcademic.classList.remove('active');
+            if (labelPro) labelPro.classList.add('active');
+        }
     }
 
 });
