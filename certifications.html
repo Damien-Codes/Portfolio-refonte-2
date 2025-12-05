@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toutes mes Certifications - Portfolio Développeur</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <header id="header">
+        <nav class="container">
+            <a href="index.html" class="logo">Damien PINO</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">À Propos</a></li>
+                <li><a href="index.html#projects">Projets</a></li>
+                <li><a href="index.html#experience">Expérience</a></li>
+                <li><a href="certifications.html" class="active">Certifications</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <section id="certifications-hero">
+        <div class="container">
+            <h1 class="hero-title">🎓 Toutes mes <span class="highlight">Certifications</span></h1>
+            <p class="hero-subtitle">Découvrez l'ensemble de mon parcours académique et professionnel</p>
+        </div>
+    </section>
+
+    <section id="certifications-page">
+        <div class="container">
+
+            <!-- Filters -->
+            <div class="filters-container">
+                <div class="filters-group">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-th"></i> Tout afficher
+                    </button>
+                    <button class="filter-btn" data-filter="web">
+                        <i class="fas fa-globe"></i> Développement Web
+                    </button>
+                    <button class="filter-btn" data-filter="mobile">
+                        <i class="fas fa-mobile-alt"></i> Développement Mobile
+                    </button>
+                    <button class="filter-btn" data-filter="backend">
+                        <i class="fas fa-server"></i> Back-end
+                    </button>
+                    <button class="filter-btn" data-filter="fullstack">
+                        <i class="fas fa-layer-group"></i> Full Stack
+                    </button>
+                </div>
+                <div class="results-count">
+                    <span id="count">6</span> certifications trouvées
+                </div>
+            </div>
+
+            <!-- Certifications Grid -->
+            <div class="all-certifications-grid">
+
+                <!-- Certification 1 -->
+                <article class="certification-card-full" id="cert-1" data-category="web mobile fullstack">
+                    <div class="certification-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Bachelors Développeur Solutions Web et Mobile</h3>
+                        <p class="certification-school">Coding Factory - École d'ingénieur, Paris</p>
+                        <p class="certification-description">Formation complète en développement web et mobile avec
+                            focus sur les technologies modernes et les méthodologies agiles. Apprentissage des
+                            frameworks JavaScript modernes, développement d'applications mobiles natives et hybrides.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Agile</span>
+                        </div>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2025 - 2028</span>
+                            <span class="certification-level"><i class="fas fa-award"></i> Bac+3</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certification 2 -->
+                <article class="certification-card-full" id="cert-2" data-category="web backend fullstack">
+                    <div class="certification-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Bachelors Concepteur Développeur d'Application</h3>
+                        <p class="certification-school">GRETA - École, Paris Nanterre</p>
+                        <p class="certification-description">Spécialisation en conception et développement
+                            d'applications avec une approche orientée architecture logicielle. Maîtrise des design
+                            patterns, des architectures MVC et des API REST.</p>
+                        <div class="tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">MVC</span>
+                            <span class="tag">API REST</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Symfony</span>
+                        </div>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2024 - 2025</span>
+                            <span class="certification-level"><i class="fas fa-award"></i> Bac+3</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certification 3 -->
+                <article class="certification-card-full" id="cert-3" data-category="web backend">
+                    <div class="certification-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>BTS Services Informatiques aux Organisations</h3>
+                        <p class="certification-school">Lycée Parc de Vilgenis - Massy</p>
+                        <p class="certification-description">Formation fondamentale en développement logiciel avec
+                            spécialisation SLAM (Solutions Logicielles et Applications Métiers). Apprentissage des bases
+                            de la programmation et des systèmes d'information.</p>
+                        <div class="tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Git</span>
+                        </div>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2022 - 2024</span>
+                            <span class="certification-level"><i class="fas fa-award"></i> Bac+2</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certification 4 - Additional -->
+                <article class="certification-card-full" data-category="web">
+                    <div class="certification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Certification JavaScript Avancé</h3>
+                        <p class="certification-school">Formation en ligne - Udemy</p>
+                        <p class="certification-description">Maîtrise approfondie de JavaScript ES6+, programmation
+                            asynchrone, closures, prototypes et patterns avancés pour le développement web moderne.</p>
+                        <div class="tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">ES6+</span>
+                            <span class="tag">Async/Await</span>
+                            <span class="tag">Promises</span>
+                        </div>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2024</span>
+                            <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certification 5 - Additional -->
+                <article class="certification-card-full" data-category="backend">
+                    <div class="certification-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Certification Base de Données & SQL</h3>
+                        <p class="certification-school">Formation en ligne - OpenClassrooms</p>
+                        <p class="certification-description">Conception et gestion de bases de données relationnelles,
+                            optimisation des requêtes SQL, normalisation et indexation pour des performances optimales.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">SQL</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">PostgreSQL</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Certification 6 - Additional -->
+                <article class="certification-card-full" data-category="mobile">
+                    <div class="certification-icon">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Certification Développement Mobile React Native</h3>
+                        <p class="certification-school">Formation en ligne - Udemy</p>
+                        <p class="certification-description">Développement d'applications mobiles cross-platform avec
+                            React Native, gestion d'état avec Redux, navigation et intégration d'API natives.</p>
+                        <div class="tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Redux</span>
+                            <span class="tag">Expo</span>
+                            <span class="tag">iOS/Android</span>
+                        </div>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2024</span>
+                            <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p class="copyright">© 2025 Portfolio. Développé avec <i class="fas fa-heart"></i> par <span
+                    class="footer-name">Damien Pino</span></p>
+        </div>
+    </footer>
+
+    <script src="certifications.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
