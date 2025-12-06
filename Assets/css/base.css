@@ -10,6 +10,16 @@
     --transition: all 0.3s ease;
 }
 
+body.light-mode {
+    --bg-color: #eff6ff;
+    --card-bg: rgb(255 255 255 / 32%);
+    --text-primary: #000000;
+    --text-secondary: #5f5b5b;
+    --accent-from: #2563eb;
+    --accent-to: #d0daf5;
+    --border-color: #cbd5e1;
+}
+
 /* --- RESET & BASE --- */
 * {
     margin: 0;
@@ -28,6 +38,11 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     min-height: 100vh;
+}
+
+body.light-mode {
+    background-image: radial-gradient(circle at 50% 0%, #dbeafe 0%, var(--bg-color) 70%);
+    background-attachment: fixed;
 }
 
 a {
@@ -64,6 +79,12 @@ ul {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+.light-mode #header {
+    background-color: rgba(255, 255, 255, 0.75);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 #header .container {
     display: flex;
     justify-content: space-between;
@@ -80,6 +101,13 @@ ul {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
+}
+
+.light-mode .logo {
+    background: linear-gradient(135deg, #6ea8d6 0%, #4a89c4 50%, #3b82f6 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-links {
@@ -122,63 +150,7 @@ section {
     font-weight: 700;
 }
 
-/* --- BUTTONS --- */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: var(--transition);
-    cursor: pointer;
-}
 
-.btn.primary {
-    background: transparent;
-    border: 1.5px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-primary);
-    position: relative;
-    overflow: hidden;
-}
-
-.btn.primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, var(--accent-from), var(--accent-to));
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.btn.primary:hover {
-    border-color: var(--accent-from);
-    transform: translateY(-2px);
-}
-
-.btn.primary:hover::before {
-    opacity: 0.15;
-}
-
-.btn.secondary {
-    background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: var(--text-secondary);
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem;
-    border-radius: 6px;
-}
-
-.btn.secondary:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.3);
-    color: var(--text-primary);
-}
 
 /* --- FOOTER --- */
 footer {
@@ -238,4 +210,81 @@ footer {
     .hamburger {
         display: block;
     }
+}
+
+/* --- THEME TOGGLE BUTTON --- */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.662);
+    /* Couleur Dark Mode */
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: var(--transition);
+    /* Ceci assure la fluidité */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.light-mode .theme-toggle {
+    color: rgba(0, 123, 255, 0.662);
+    /* Couleur Light Mode */
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+    /* ✨ CORRECTION DE L'ANIMATION ✨ */
+    color: var(--accent-from);
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Règle d'affichage des icônes */
+.light-mode .theme-toggle .fa-sun {
+    display: none;
+}
+
+.light-mode .theme-toggle .fa-moon {
+    display: inline-block;
+}
+
+.theme-toggle .fa-moon {
+    display: none;
+}
+
+/* --- LIGHT MODE BUTTON OVERRIDES --- */
+.light-mode .btn.secondary {
+    border-color: rgba(59, 130, 246, 0.3);
+    color: var(--text-primary);
+    background-color: transparent;
+}
+
+.light-mode .btn.secondary:hover {
+    border-color: var(--accent-from);
+    background-color: rgba(59, 130, 246, 0.1);
+    color: var(--accent-from);
+}
+
+
+/* --- LIGHT MODE FOOTER --- */
+.light-mode footer {
+    background-color: transparent;
+    border-top: 1px solid rgba(46, 46, 46, 0.05);
+}
+
+.light-mode .copyright {
+    color: #000000;
+    opacity: 0.7;
+}
+
+.light-mode .footer-name {
+    color: var(--accent-from);
 }

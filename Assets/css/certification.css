@@ -64,6 +64,11 @@
     transform: translateY(-2px);
 }
 
+.light-mode .filter-btn:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
 .filter-btn.active {
     background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.15) 100%);
     border-color: var(--accent-from);
@@ -109,6 +114,12 @@
     box-shadow: 0 15px 40px rgba(220, 38, 38, 0.2);
 }
 
+.light-mode .certification-card-full:hover {
+    background-color: #fcfcfc;
+    border-color: rgba(59, 130, 246, 0.4);
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+}
+
 .certification-icon {
     font-size: 3rem;
     color: var(--accent-from);
@@ -121,6 +132,10 @@
     background-color: rgba(220, 38, 38, 0.1);
 }
 
+.light-mode .certification-icon {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
 .certification-card-full .certification-content h3 {
     margin-top: 0;
     font-size: 1.4rem;
@@ -129,9 +144,10 @@
 }
 
 .certification-card-full .certification-school {
-    color: var(--text-secondary);
+    color: var(--accent-from);
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .certification-card-full .certification-description {
@@ -155,6 +171,17 @@
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.certification-footer i {
+    color: var(--accent-from);
+    margin-right: 0.5rem;
+}
+
+.certification-level,
+.certification-year {
+    display: flex;
+    align-items: center;
+}
+
 /* --- LIGHT MODE OVERRIDES --- */
 .light-mode .certification-card-full {
     background-color: var(--card-bg);
@@ -166,10 +193,13 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
 }
 
+
+
 .light-mode .filter-btn.active {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(185, 28, 28, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
     border-color: var(--accent-from);
-    color: var(--light-text-primary);
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 /* --- RESPONSIVE CERTIFICATIONS PAGE --- */
