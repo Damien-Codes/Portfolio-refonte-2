@@ -61,11 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 showMoreBtn.innerHTML = '<i class="fas fa-minus"></i> Voir moins';
             } else {
                 showMoreBtn.innerHTML = '<i class="fas fa-plus"></i> Voir plus de projets';
-                // Optionnel : remonter légèrement si on ferme
-                const projectsSection = document.getElementById('projects');
-                if (projectsSection) {
-                    projectsSection.scrollIntoView({ behavior: 'smooth' });
-                }
             }
         });
     }
