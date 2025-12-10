@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Assets/icon.svg" type="image/x-icon">
     <title>Toutes mes Certifications - Portfolio Développeur</title>
     <link rel="stylesheet" href="Assets/css/base.css">
     <link rel="stylesheet" href="Assets/css/certification.css">
@@ -54,17 +55,14 @@
                     <button class="filter-btn active" data-filter="all">
                         <i class="fas fa-list"></i> Tout Afficher
                     </button>
-                    <button class="filter-btn" data-filter="web">
-                        <i class="fas fa-globe"></i> Développement Web
+                    <button class="filter-btn" data-filter="Langages">
+                        <i class="fa-solid fa-code"></i> Langages de Programmation
                     </button>
-                    <button class="filter-btn" data-filter="mobile">
-                        <i class="fas fa-mobile-alt"></i> Développement Mobile
+                    <button class="filter-btn" data-filter="Bases de Données">
+                        <i class="fa-solid fa-database"></i> Bases de Données
                     </button>
-                    <button class="filter-btn" data-filter="backend">
-                        <i class="fas fa-server"></i> Back-end
-                    </button>
-                    <button class="filter-btn" data-filter="fullstack">
-                        <i class="fas fa-layer-group"></i> Full Stack
+                    <button class="filter-btn" data-filter="design">
+                        <i class="fa-solid fa-object-group"></i> Concepts & Design
                     </button>
                     <button class="filter-btn" data-filter="cybersecurity">
                         <i class="fas fa-shield-alt"></i> Cybersécurité
@@ -77,124 +75,244 @@
                     <span id="count">6</span> éléments trouvés
                 </div>
             </div>
-
+            <!-- certification-card-full -->
             <div class="all-certifications-grid">
-
-                <article class="certification-card-full" id="cert-1" data-category="diplome web mobile fullstack">
-                    <div class="certification-icon fullstack-icon">
-                        <i class="fas fa-layer-group"></i>
+                <article class="certification-card-full" id="cert-2" data-category="Langages">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-code"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>Bachelors Développeur Solutions Web et Mobile</h3>
-                        <p class="certification-school">Coding Factory - École d'ingénieur, Paris</p>
-                        <p class="certification-description">Formation complète en développement web et mobile avec
-                            focus sur les technologies modernes et les méthodologies agiles. Apprentissage des
-                            frameworks JavaScript modernes, développement d'applications mobiles natives et hybrides.
+                        <h3>Python</h3>
+                        <p class="certification-school">En ligne - Sololearn</p>
+                        <p class="certification-description">Langage Python, réputé pour sa polyvalence en développement
+                            web, en scripting et en analyse de données (Data Science). Utile aussi bien pour l'IA, du
+                            scripting et de l'automatisation de tâches complexes.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Sololearn/Certification Python.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="certification-card-full" id="cert-1" data-category="Bases de Données">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>SQL</h3>
+                        <p class="certification-school">En ligne - Sololearn</p>
+                        <p class="certification-description">Formation sur le Langage SQL (Structured Query Language),
+                            essentielle pour l'interrogation, la manipulation et la structuration des bases de données
+                            relationnelles. SQL permet de maîtriser la gestion de l'information et d'assurer
+                            l'intégrité des données.
                         </p>
-                        <div class="tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">React Native</span>
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Agile</span>
-                        </div>
                         <div class="certification-footer">
-                            <span class="certification-year"><i class="fas fa-calendar"></i> 2025 - 2028</span>
-                            <span class="certification-level"><i class="fas fa-award"></i> Bac+3</span>
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Sololearn/Certification SQL.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
                         </div>
                     </div>
                 </article>
-
-                <article class="certification-card-full" id="cert-2" data-category="diplome web backend fullstack">
-                    <div class="certification-icon fullstack-icon">
-                        <i class="fas fa-layer-group"></i>
+                <article class="certification-card-full" id="cert-1" data-category="Bases de Données">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-database"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>Bachelors Concepteur Développeur d'Application</h3>
-                        <p class="certification-school">GRETA - École, Paris Nanterre</p>
-                        <p class="certification-description">Spécialisation en conception et développement
-                            d'applications avec une approche orientée architecture logicielle. Maîtrise des design
-                            patterns, des architectures MVC et des API REST.</p>
-                        <div class="tags">
-                            <span class="tag">PHP</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">MVC</span>
-                            <span class="tag">API REST</span>
-                            <span class="tag">Laravel</span>
-                            <span class="tag">Symfony</span>
-                        </div>
+                        <h3>MySQL</h3>
+                        <p class="certification-school">En ligne - Udemy</p>
+                        <p class="certification-description">Formation sur le Langage SQL (Structured Query Language),
+                            essentielle pour l'interrogation, la manipulation et la structuration des bases de données
+                            relationnelles. SQL permet de maîtriser la gestion de l'information et d'assurer
+                            l'intégrité des données.
+                        </p>
                         <div class="certification-footer">
-                            <span class="certification-year"><i class="fas fa-calendar"></i> 2024 - 2025</span>
-                            <span class="certification-level"><i class="fas fa-award"></i> Bac+3</span>
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Udemy/Formation MySQL A à Z.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="certification-card-full" id="cert-2" data-category="Langages">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>PHP</h3>
+                        <p class="certification-school">En ligne - Sololearn</p>
+                        <p class="certification-description">PHP, le pilier du développement web côté serveur. Elle
+                            permet de maîtriser la logique applicative dynamique, la gestion des sessions utilisateurs,
+                            et l'interfaçage d'applications web.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Sololearn/Certification PHP.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="certification-card-full" id="cert-2" data-category="Langages">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>JavaScript</h3>
+                        <p class="certification-school">En ligne - Sololearn</p>
+                        <p class="certification-description">JavaScript, le langage de programmation du navigateur. Elle
+                            permet de créer des extensions/applications web dynamiques et interactives, maîtriser la
+                            logique applicative et dynamiser l'interfaçage d'applications web.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Sololearn/Certification JavaScript.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="certification-card-full" id="cert-2" data-category="Langages">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>C#</h3>
+                        <p class="certification-school">En ligne - Sololearn</p>
+                        <p class="certification-description">C#, le langage de programmation de bureau. Elle
+                            permet de créer des applications de bureau, maîtriser la logique de la programmation
+                            Orientée Objet.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Sololearn/Certification CSharp.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="certification-card-full" id="cert-2" data-category="Langages">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Kotlin</h3>
+                        <p class="certification-school">En ligne - Udemy</p>
+                        <p class="certification-description">Kotlin, le langage de programmation pour le mobile. Elle
+                            permet de créer des applications mobiles dynamiques et interactives.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2024</span>
+                            <a href="Assets/Certificates/Udemy/Kotlin.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="certification-card-full" id="cert-2" data-category="Langages">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>React</h3>
+                        <p class="certification-school">En ligne - Udemy</p>
+                        <p class="certification-description">React, le langage de programmation pour le web. Elle
+                            permet de créer des applications web dynamiques et interactives.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Udemy/React JS for Beginners.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
                         </div>
                     </div>
                 </article>
 
-                <article class="certification-card-full" id="cert-3" data-category="diplome backend cybersecurity">
+                <article class="certification-card-full" id="cert-1" data-category="design">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-object-group"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Responsive Web Design</h3>
+                        <p class="certification-school">En ligne - Sololearn</p>
+                        <p class="certification-description">Formation axée sur le Responsive Web Design, la pratique de
+                            la construction de sites web modernes et réactifs, capables de s'adapter à tous les
+                            appareils et tailles d'écran.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Sololearn/Certification Responsive Web Design.pdf"
+                                target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="certification-card-full" id="cert-2" data-category="Langages">
+                    <div class="certification-icon web-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="certification-content">
+                        <h3>Bootstrap</h3>
+                        <p class="certification-school">En ligne - Udemy</p>
+                        <p class="certification-description">Bootstrap, le framework de développement web. Elle
+                            permet de créer des applications web dynamiques et interactives.</p>
+                        <div class="certification-footer">
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/Udemy/Bootstrap 5.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+
+
+                <article class="certification-card-full" id="cert-3" data-category="cybersecurity">
                     <div class="certification-icon cybersecurity-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>BTS Services Informatiques aux Organisations (Option Cybersécurité)</h3>
-                        <p class="certification-school">Lycée Parc de Vilgenis - Massy</p>
-                        <p class="certification-description">Formation fondamentale en développement logiciel avec
-                            spécialisation SLAM (Solutions Logicielles et Applications Métiers) et initiation à la
-                            sécurité des systèmes d'information.</p>
-                        <div class="tags">
-                            <span class="tag">Sécurité</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">SQL</span>
-                            <span class="tag">Réseaux</span>
-                            <span class="tag">Git</span>
-                        </div>
+                        <h3>Principes de Sécurité Numérique</h3>
+                        <p class="certification-school">En ligne - Cisco Networking Academy</p>
+                        <p class="certification-description">Formation sur les fondamentaux de la cybersécurité,
+                            de l'identification des menaces aux vulnérabilités, sur la protection des données et des
+                            systèmes via l'application des technologies de défense clés (authentification,
+                            chiffrement) et les bonnes pratiques de sécurité en ligne.</p>
                         <div class="certification-footer">
-                            <span class="certification-year"><i class="fas fa-calendar"></i> 2022 - 2024</span>
-                            <span class="certification-level"><i class="fas fa-award"></i> Bac+2</span>
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2022</span>
+                            <a href="Assets/Certificates/CISCO/Introduction_to_Cybersecurity.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
                         </div>
                     </div>
                 </article>
-
-                <article class="certification-card-full" data-category="certification web">
-                    <div class="certification-icon web-icon">
-                        <i class="fas fa-globe"></i>
+                <article class="certification-card-full" id="cert-2" data-category="cybersecurity">
+                    <div class="certification-icon sécurité-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>Certification JavaScript Avancé</h3>
-                        <p class="certification-school">Formation en ligne - Udemy</p>
-                        <p class="certification-description">Maîtrise approfondie de JavaScript ES6+, programmation
-                            asynchrone, closures, prototypes et patterns avancés pour le développement web moderne.</p>
-                        <div class="tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">ES6+</span>
-                            <span class="tag">Async/Await</span>
-                            <span class="tag">Promises</span>
-                        </div>
+                        <h3>MOOC</h3>
+                        <p class="certification-school">En ligne - SecnumAcademy</p>
+                        <p class="certification-description">Formation sur les fondamentaux de la cybersécurité,
+                            de l'identification des menaces aux vulnérabilités, sur la protection des données et des
+                            systèmes via l'application des technologies de défense clés (authentification,
+                            chiffrement) et les bonnes pratiques de sécurité en ligne.</p>
                         <div class="certification-footer">
-                            <span class="certification-year"><i class="fas fa-calendar"></i> 2024</span>
-                            <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            <span class="certification-year"><i class="fas fa-calendar"></i> 2023</span>
+                            <a href="Assets/Certificates/ANSSI/Certification_Secnum.pdf" target="_blank">
+                                <span class="certification-level"><i class="fas fa-award"></i> Certification</span>
+                            </a>
                         </div>
                     </div>
                 </article>
 
-                <article class="certification-card-full" data-category="certification backend finance">
+                <article class="certification-card-full" data-category="certification finance">
                     <div class="certification-icon finance-icon">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>Investir dans les NFT globalement</h3>
+                        <h3>Comprendre/Investir dans les NFT</h3>
                         <p class="certification-school">Formation en ligne - Udemy</p>
                         <p class="certification-description">Formation approfondie sur la création, l'acquisition et
                             l'investissement
                             dans les jetons non fongibles (NFT). Couvre l'analyse du marché, les plateformes d'échange
-                            et les
-                            stratégies de portefeuille dans l'écosystème du Web3.</p>
-                        <div class="tags">
-                            <span class="tag">NFT</span>
-                            <span class="tag">Blockchain</span>
-                            <span class="tag">Crypto</span>
-                            <span class="tag">Web3</span>
-                        </div>
+                            et les stratégies de portefeuille dans l'écosystème du Web3.</p>
                         <div class="certification-footer">
                             <span class="certification-year"><i class="fas fa-calendar"></i> 22 août 2023</span>
                             <a href="Assets/Certificates/Udemy/NFT pour les débutants.pdf" target="_blank">
