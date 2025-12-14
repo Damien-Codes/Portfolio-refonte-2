@@ -224,6 +224,48 @@
     overflow: hidden;
 }
 
+.skills-carousel::before,
+.skills-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 55px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.skills-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, #230606 2%, transparent 100%);
+}
+
+.skills-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, #230606 2%, transparent 100%);
+}
+
+.light-mode .skills-carousel::before,
+.light-mode .skills-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 55px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.light-mode .skills-carousel::before {
+    left: 0;
+    background: linear-gradient(to right, #e7f1fe 2%, transparent 100%);
+}
+
+.light-mode .skills-carousel::after {
+    right: 0;
+    background: linear-gradient(to left, #e7f1fe 2%, transparent 100%);
+}
+
 .skills-carousel {
     position: relative;
     overflow: hidden;
