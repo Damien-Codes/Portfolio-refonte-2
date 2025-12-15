@@ -20,6 +20,153 @@ body.light-mode {
     --border-color: #cbd5e1;
 }
 
+/* --- STYLE DU MENU DÉROULANT DE LANGUE --- */
+
+.lang-dropdown-container {
+    position: relative;
+}
+
+.lang-dropdown-button {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.8rem;
+    transition: var(--transition);
+    font-weight: 600;
+    border-radius: 20px;
+    margin-left: 0.5rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+
+/* Cacher le label de langue actuelle */
+#current-lang-label {
+    display: none;
+}
+
+.lang-dropdown-button i:first-child {
+    font-size: 1rem;
+}
+
+.lang-dropdown-button i:last-child {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+}
+
+.lang-dropdown-button:hover {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.1) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.2);
+}
+
+.light-mode .lang-dropdown-button:hover {
+    background: linear-gradient(135deg, rgba(38, 81, 220, 0.194));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(38, 81, 220, 0.194);
+}
+
+.lang-dropdown-button.active i:last-child {
+    transform: rotate(180deg);
+}
+
+
+/* Menu déroulant */
+.lang-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 0.5rem;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.lang-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.lang-option {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.lang-option:hover {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.1) 100%);
+    transform: translateX(3px);
+}
+
+.lang-option.active {
+    background: linear-gradient(135deg, rgba(220, 38, 38, 0.3) 0%, rgba(185, 28, 28, 0.2) 100%);
+    border-left: 3px solid var(--accent-from);
+}
+
+.light-mode .lang-option:hover {
+    background: linear-gradient(135deg, rgba(38, 81, 220, 0.194));
+    transform: translateX(3px);
+}
+
+.light-mode .lang-option.active {
+    background: linear-gradient(135deg, rgba(38, 81, 220, 0.194));
+    border-left: 3px solid var(--accent-from);
+}
+
+.lang-flag {
+    font-size: 1.2rem;
+}
+
+.lang-name {
+    flex: 1;
+    text-align: left;
+}
+
+/* Light mode adjustments */
+body.light-mode .lang-dropdown-menu {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 245, 245, 0.95) 100%);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* Style pour le Light Mode */
+.light-mode .lang-switch-button {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(37, 99, 235, 0.05) 100%);
+    border-color: rgba(59, 130, 246, 0.3);
+    color: var(--text-primary);
+}
+
+.light-mode .lang-switch-button:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(37, 99, 235, 0.1) 100%);
+    border-color: var(--accent-from);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
 /* --- RESET & BASE --- */
 * {
     margin: 0;

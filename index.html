@@ -20,13 +20,30 @@
 
     <header id="header">
         <nav class="container">
-            <a href="#hero" class="logo">Portfolio</a>
+            <a href="#hero" class="logo" data-key="nav_logo">Portfolio</a>
             <ul class="nav-links">
-                <li><a href="#about">À Propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#experience">Parcours</a></li>
-                <li><a href="#certifications">Certifications</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-key="nav_about">À Propos</a></li>
+                <li><a href="#projects" data-key="nav_projects">Projets</a></li>
+                <li><a href="#experience" data-key="nav_experience">Parcours</a></li>
+                <li><a href="#certifications" data-key="nav_certifications">Certifications</a></li>
+                <li><a href="#contact" data-key="nav_contact">Contact</a></li>
+                <li class="lang-dropdown-container">
+                    <button id="lang-dropdown-btn" class="lang-dropdown-button" aria-label="Changer de langue">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="current-lang-label"></span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="lang-dropdown-menu" class="lang-dropdown-menu">
+                        <button class="lang-option" data-lang="fr">
+                            <span class="lang-flag">🇫🇷</span>
+                            <span class="lang-name" data-key="lang_french">Français</span>
+                        </button>
+                        <button class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-name" data-key="lang_english">Anglais</span>
+                        </button>
+                    </div>
+                </li>
                 <li>
                     <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                         <i class="fas fa-sun"></i>
@@ -42,23 +59,25 @@
 
     <section id="hero">
         <div class="container hero-content">
-            <h1>Développeur <span class="highlight">Full Stack</span></h1>
-            <p>Passionné par le développement Web, Applicatif et Mobile, j'explore continuellement des technologies pour
+            <h1 data-key="hero_title">Développeur <span class="highlight">Full Stack</span></h1>
+            <p data-key="hero_subtitle">Passionné par le développement Web, Applicatif et Mobile, j'explore
+                continuellement des technologies pour
                 la conception de solutions digitales.</p>
-            <a href="#projects" class="btn primary">Voir mes projets</a>
-            <a href="Assets/CV.pdf" download class="btn btn-secondary">Télécharger CV</a>
+            <a href="#projects" class="btn primary" data-key="hero_btn_projects">Voir mes projets</a>
+            <a href="Assets/CV.pdf" download class="btn btn-secondary" data-key="hero_btn_cv">Télécharger CV</a>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
             <div class="section-titles-grid">
-                <h2 class="section-title">À Propos</h2>
-                <h2 class="section-title">Technologies</h2>
+                <h2 class="section-title" data-key="about_title">À Propos</h2>
+                <h2 class="section-title" data-key="tech_title">Technologies</h2>
             </div>
             <div class="about-content">
                 <div class="bio">
-                    <p>Développeur curieux et engagé, j'imagine et je créer des solutions digitales. Je m'efforce de
+                    <p data-key="about_bio">Développeur curieux et engagé, j'imagine et je créer des solutions
+                        digitales. Je m'efforce de
                         suivre les évolutions de la tech, tout en m'inspirant simplement de mes intérêts personnels,
                         comme les marchés financiers et le montage vidéo, qui me permettent d'avoir un équilibre
                         entre analyse et créativité dans mes projets quotidiens.
@@ -198,7 +217,7 @@
 
     <section id="projects">
         <div class="container">
-            <h2 class="section-title">✨ Mes Projets</h2>
+            <h2 class="section-title" data-key="projects_main_title">✨ Mes Projets</h2>
 
             <div class="projects-list">
                 <article class="project-card-alt reverse">
@@ -208,12 +227,14 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Personnalisation de Bouquet
+                        <h3 data-key="project1_title">Personnalisation de Bouquet
                             <div class="contact-badge">
-                                <i class="fa-solid fa-arrows-rotate fa-spin"></i> Bientôt
+                                <i class="fa-solid fa-arrows-rotate fa-spin"></i> <span
+                                    data-key="project1_badge">Bientôt</span>
                             </div>
                         </h3>
-                        <p>Développement d'une application dédiée à la personnalisation avancée de bouquets de fleurs
+                        <p data-key="project1_desc">Développement d'une application dédiée à la personnalisation avancée
+                            de bouquets de fleurs
                             pour une clientèle B2C et B2B, offrant également des options pour les bouquets de saison et
                             d'événements. Le projet est axé sur l'intégration d'un configurateur visuel dynamique et 3D,
                             permettant au client de composer son bouquet sur mesure en sélectionnant en temps réel les
@@ -226,9 +247,10 @@
                             <span class="tag">Git</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn secondary"><i class="fab fa-github"></i> Bientôt</a>
+                            <a href="#" class="btn secondary"><i class="fab fa-github"></i> <span
+                                    data-key="project1_badge">Bientôt</span></a>
                             <a href="#" class="btn secondary"><i class="fas fa-external-link-alt"></i>
-                                Bientôt</a>
+                                <span data-key="project1_badge">Bientôt</span></a>
                         </div>
                     </div>
                 </article>
@@ -240,8 +262,9 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>YouTube PiP</h3>
-                        <p>Développement d'une extension Web pour optimiser le multitâche. Le projet est axé sur
+                        <h3 data-key="project2_title">YouTube PiP</h3>
+                        <p data-key="project2_desc">Développement d'une extension Web pour optimiser le multitâche. Le
+                            projet est axé sur
                             l'intégration d'un mécanisme de lecture vidéo flottant, permettant de détacher n'importe
                             quelle vidéo d'une page Web dans une fenêtre redimensionnable et toujours visible. L'outil
                             assure une gestion complète des contrôles de lecture, pause et son intégration non intrusive
@@ -253,10 +276,11 @@
                             <span class="tag">Git</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Damien-Codes/Extension_Web" class="btn secondary">
-                                <i class="fab fa-github"></i>Voir le Code</a>
-                            <a href="https://damien-codes.github.io/Web-Extension-Site/" class="btn secondary"><i
-                                    class="fas fa-external-link-alt"></i>
+                            <a href="https://github.com/Damien-Codes/Extension_Web" class="btn secondary"
+                                data-key="link_code">
+                                <i class="fab fa-github"></i> Voir le Code</a>
+                            <a href="https://damien-codes.github.io/Web-Extension-Site/" class="btn secondary"
+                                data-key="link_view"><i class="fas fa-external-link-alt"></i>
                                 Voir le Projet</a>
                         </div>
                     </div>
@@ -272,8 +296,9 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>SpotyFusion</h3>
-                        <p>Développée pour enrichir l'engagement utilisateur de Spotify. Axé sur l'intégration front-end
+                        <h3 data-key="project3_title">SpotyFusion</h3>
+                        <p data-key="project3_desc">Développée pour enrichir l'engagement utilisateur de Spotify. Axé
+                            sur l'intégration front-end
                             et l'exploitation de données tierces, utilise le flux OAuth 2.0 de l'API Spotify pour
                             générer deux outils principaux : un Dashboard d'analyse musicale personnalisé et un Blind
                             Test interactif.</p>
@@ -287,8 +312,8 @@
                         <div class="project-links">
                             <a href="https://github.com/Damien-Codes/SpotyFusion" class="btn secondary"><i
                                     class="fab fa-github"></i> Code</a>
-                            <a href="https://github.com/Damien-Codes/SpotyFusion" class="btn secondary"><i
-                                    class="fas fa-external-link-alt"></i>
+                            <a href="https://github.com/Damien-Codes/SpotyFusion" class="btn secondary"
+                                data-key="link_view"><i class="fas fa-external-link-alt"></i>
                                 Voir le projet</a>
                         </div>
                     </div>
@@ -301,8 +326,9 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Doorception</h3>
-                        <p>Conception et développement d'un Escape Game immersif en 3D. Le projet se concentre sur
+                        <h3 data-key="project4_title">Doorception</h3>
+                        <p data-key="project4_desc">Conception et développement d'un Escape Game immersif en 3D. Le
+                            projet se concentre sur
                             l'intégration de mécanismes de jeu interactifs et la résolution d'énigmes. Gestion avancée
                             des physiques, des animations environnementales et d'un système d'inventaire pour une
                             expérience complète.</p>
@@ -315,7 +341,7 @@
                         <div class="project-links">
                             <a href="https://github.com/alexlastique/doorception" class="btn secondary"><i
                                     class="fab fa-github"></i> Code</a>
-                            <a href="#" class="btn secondary"><i class="fas fa-play"></i> Démo</a>
+                            <a href="#" class="btn secondary" data-key="link_demo"><i class="fas fa-play"></i> Démo</a>
                         </div>
                     </div>
                 </article>
@@ -326,8 +352,9 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>StarDucks</h3>
-                        <p>Conception et développement d'une application bureau pour la gestion des commandes de
+                        <h3 data-key="project5_title">StarDucks</h3>
+                        <p data-key="project5_desc">Conception et développement d'une application bureau pour la gestion
+                            des commandes de
                             boissons.
                             Le projet se concentre sur l'intégration d'une interface intuitive et de mécanismes de
                             recherche et de filtrage.</p>
@@ -339,8 +366,8 @@
                         <div class="project-links">
                             <a href="https://github.com/Damien-Codes/Starducks" class="btn secondary"><i
                                     class="fab fa-github"></i> Code</a>
-                            <a href="https://damien-codes.github.io/Starducks/" class="btn secondary"><i
-                                    class="fas fa-external-link-alt"></i>
+                            <a href="https://damien-codes.github.io/Starducks/" class="btn secondary"
+                                data-key="link_view"><i class="fas fa-external-link-alt"></i>
                                 Voir le projet</a>
                         </div>
                     </div>
@@ -348,7 +375,8 @@
             </div>
 
             <div class="projects-cta">
-                <a href="#" id="show-more-btn" class="btn primary"><i class="fas fa-plus"></i>Voir plus</a>
+                <a href="#" id="show-more-btn" class="btn primary" data-key="show_more_btn"><i class="fas fa-plus"></i>
+                    Voir plus de projets</a>
             </div>
         </div>
     </section>
@@ -357,15 +385,17 @@
 
     <section id="experience">
         <div class="container">
-            <h2 class="section-title">Mon Parcours</h2>
+            <h2 class="section-title" data-key="experience_title">Mon Parcours</h2>
 
             <div class="toggle-container">
-                <span id="label-pro" class="toggle-label active" onclick="setTimeline('pro')">Professionnel</span>
+                <span id="label-pro" class="toggle-label active" onclick="setTimeline('pro')"
+                    data-key="label_pro">Professionnel</span>
                 <label class="toggle-switch-wrapper">
                     <input type="checkbox" id="timeline-toggle" class="toggle-checkbox">
                     <span class="toggle-slider"></span>
                 </label>
-                <span id="label-academic" class="toggle-label" onclick="setTimeline('academic')">Académique</span>
+                <span id="label-academic" class="toggle-label" onclick="setTimeline('academic')"
+                    data-key="label_academic">Académique</span>
             </div>
 
             <div id="timeline-pro" class="timeline fade-in">
@@ -375,17 +405,18 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2023 jusqu'à ce jour</div>
-                        <h3>Vendeur Polyvalent CDI (étudiant)</h3>
-                        <h4>La Vie Claire - Massy</h4>
-                        <p>En tant que Vendeur Polyvalent, je suis en charge de l'expérience client, assurant bon
+                        <div class="timeline-year" data-key="exp_pro1_year">2023 jusqu'à ce jour</div>
+                        <h3 data-key="exp_pro1_title">Vendeur Polyvalent CDI (étudiant)</h3>
+                        <h4 data-key="exp_pro1_company">La Vie Claire - Massy</h4>
+                        <p data-key="exp_pro1_desc">En tant que Vendeur Polyvalent, je suis en charge de l'expérience
+                            client, assurant bon
                             conseil et orientation pour maximiser la satisfaction client, soutenir les objectifs de
                             vente et la garantie des normes d'hygiène, de sécurité.</p>
                         <div class="timeline-tags">
-                            <span class="tag">Conseil Client</span>
+                            <span class="tag" data-key="tag_customer_service">Conseil Client</span>
                             <span class="tag">Merchandising</span>
-                            <span class="tag">Gestion des Stocks</span>
-                            <span class="tag">Travail d'Équipe</span>
+                            <span class="tag" data-key="tag_stock">Gestion des Stocks</span>
+                            <span class="tag" data-key="tag_teamwork">Travail d'Équipe</span>
                         </div>
                     </div>
                 </div>
@@ -394,10 +425,11 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2023 - 2024</div>
-                        <h3>Développeur Web</h3>
-                        <h4>Techfizz - Massy (Stage 8 semaines)</h4>
-                        <p>Conception et développement complet d'un Outil de Formation, intégrant un système dédié aux
+                        <div class="timeline-year" data-key="exp_pro2_year">2023 - 2024</div>
+                        <h3 data-key="exp_pro2_title">Développeur Web</h3>
+                        <h4 data-key="exp_pro2_company">Techfizz - Massy (Stage 8 semaines)</h4>
+                        <p data-key="exp_pro2_desc">Conception et développement complet d'un Outil de Formation,
+                            intégrant un système dédié aux
                             formateurs pour la création, la gestion et la publication de leurs cours / modules ainsi que
                             le module permettant aux utilisateurs finaux d'assister et de suivre les cours / modules.
                         </p>
@@ -414,10 +446,11 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2022 - 2023</div>
-                        <h3>Développeur Web</h3>
-                        <h4>Tiptop - 75008 PARIS (Stage 8 semaines)</h4>
-                        <p>En tant que Développeur Web, j'ai développé des outils marketing et d'automatisation, en me
+                        <div class="timeline-year" data-key="exp_pro3_year">2022 - 2023</div>
+                        <h3 data-key="exp_pro3_title">Développeur Web</h3>
+                        <h4 data-key="exp_pro3_company">Tiptop - 75008 PARIS (Stage 8 semaines)</h4>
+                        <p data-key="exp_pro3_desc">En tant que Développeur Web, j'ai développé des outils marketing et
+                            d'automatisation, en me
                             concentrant sur
                             la création d'e-mails stylisés intégrés dans la plateforme Autotask PSA.
                             Mon rôle comprenait également le développement complet d'un système d'affiliation en
@@ -440,10 +473,11 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2021 - 2022</div>
-                        <h3>Technicien Support Informatique</h3>
-                        <h4>Tiptop - pAR (Stage 8 semaines)</h4>
-                        <p>En tant que Technicien Support Informatique, ma mission couvrait la gestion des incidents via
+                        <div class="timeline-year" data-key="exp_pro4_year">2021 - 2022</div>
+                        <h3 data-key="exp_pro4_title">Technicien Support Informatique</h3>
+                        <h4 data-key="exp_pro4_company">Tiptop - PARIS (Stage 8 semaines)</h4>
+                        <p data-key="exp_pro4_desc">En tant que Technicien Support Informatique, ma mission couvrait la
+                            gestion des incidents via
                             Zammad et le suivi des projets informatiques via Trello. Mon rôle impliquait également
                             l'assistance quotidienne à la maintenance du parc informatique de l'entreprise, ainsi que la
                             sensibilisation des utilisateurs aux bonnes pratiques essentielles de sécurité
@@ -468,10 +502,11 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2025 - 2026</div>
-                        <h3>Développeur Solutions Web et Mobile</h3>
-                        <h4>Coding Factory by ESIEE-IT - 75015 PARIS (Bac +3)</h4>
-                        <p>Cette formation en Alternance est axée sur trois piliers fondamentaux : la Sécurité
+                        <div class="timeline-year" data-key="exp_acad1_year">2025 - 2026</div>
+                        <h3 data-key="exp_acad1_title">Développeur Solutions Web et Mobile</h3>
+                        <h4 data-key="exp_acad1_company">Coding Factory by ESIEE-IT - 75015 PARIS (Bac +3)</h4>
+                        <p data-key="exp_acad1_desc">Cette formation en Alternance est axée sur trois piliers
+                            fondamentaux : la Sécurité
                             des Applications et l'Architecture, la Conception de Solutions intégrant les Méthodes
                             Agiles, et le Développement Multiplateforme.</p>
                         <div class="timeline-tags">
@@ -490,10 +525,11 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2024 - 2025</div>
-                        <h3>Concepteur Développeur d’Application</h3>
-                        <h4>CESI - École d'ingénieurs, Paris Nanterre (Bac +3)</h4>
-                        <p>Le Bachelor Concepteur Développeur d'Application est une formation spécialisée dans
+                        <div class="timeline-year" data-key="exp_acad2_year">2024 - 2025</div>
+                        <h3 data-key="exp_acad2_title">Concepteur Développeur d'Application</h3>
+                        <h4 data-key="exp_acad2_company">CESI - École d'ingénieurs, Paris Nanterre (Bac +3)</h4>
+                        <p data-key="exp_acad2_desc">Le Bachelor Concepteur Développeur d'Application est une formation
+                            spécialisée dans
                             l'ingénierie logicielle. Le programme se concentre sur la modélisation de l'architecture
                             logicielle et la construction de cahiers des charges. Il met également l'accent sur
                             l'optimisation des solutions applicatives objet et la maîtrise du Déploiement Continu.</p>
@@ -510,10 +546,11 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2022 - 2024</div>
-                        <h3>BTS SIO - Option SLAM</h3>
-                        <h4>Lycée Parc de Vilgénis - Massy (Bac +2)</h4>
-                        <p>Le BTS SIO Option SLAM est une formation axée sur la Conception et l'Administration de Bases
+                        <div class="timeline-year" data-key="exp_acad3_year">2022 - 2024</div>
+                        <h3 data-key="exp_acad3_title">BTS SIO - Option SLAM</h3>
+                        <h4 data-key="exp_acad3_company">Lycée Parc de Vilgénis - Massy (Bac +2)</h4>
+                        <p data-key="exp_acad3_desc">Le BTS SIO Option SLAM est une formation axée sur la Conception et
+                            l'Administration de Bases
                             de Données relationnelles, ainsi que sur la Création de Sites Web Dynamiques. Le programme
                             couvre également la gestion de projet informatique et les besoins fonctionnels des
                             organisations.</p>
@@ -535,10 +572,11 @@
                         <div class="timeline-dot"></div>
                     </div>
                     <div class="timeline-content">
-                        <div class="timeline-year">2019 - 2022</div>
-                        <h3>BAC PRO SN</h3>
-                        <h4>Lycée Parc de Vilgénis - Massy</h4>
-                        <p>Le Bac Pro Systèmes Numériques est une formation complète centrée sur l'exploitation et la
+                        <div class="timeline-year" data-key="exp_acad4_year">2019 - 2022</div>
+                        <h3 data-key="exp_acad4_title">BAC PRO SN</h3>
+                        <h4 data-key="exp_acad4_company">Lycée Parc de Vilgénis - Massy</h4>
+                        <p data-key="exp_acad4_desc">Le Bac Pro Systèmes Numériques est une formation complète centrée
+                            sur l'exploitation et la
                             maintenance des systèmes informatiques et des réseaux. Le programme est axé sur
                             l'installation et la configuration des infrastructures, le diagnostic de pannes matérielles
                             et logicielles, ainsi que la sécurisation de l'environnement numérique des organisations.
@@ -562,7 +600,7 @@
 
     <section id="certifications">
         <div class="container">
-            <h2 class="section-title">🎓 Mes Certifications</h2>
+            <h2 class="section-title" data-key="certifications_title">🎓 Mes Certifications</h2>
 
             <div class="certifications-grid">
 
@@ -572,9 +610,10 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>Bac Pro Systèmes Numériques</h3>
+                        <h3 data-key="cert1_title">Bac Pro Systèmes Numériques</h3>
                         <p class="certification-school">Lycée Parc de Vilgénis - Massy</p>
-                        <p class="certification-description">Formation centrée sur l'exploitation et la maintenance des
+                        <p class="certification-description" data-key="cert1_desc">Formation centrée sur l'exploitation
+                            et la maintenance des
                             systèmes informatiques et des réseaux. De l'installation à la configuration des
                             infrastructures,
                             le diagnostic de pannes matérielles et logicielles, ainsi que la sécurisation de
@@ -603,9 +642,9 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>BTS SIO Otption SLAM</h3>
+                        <h3 data-key="cert2_title">BTS SIO Otption SLAM</h3>
                         <p class="certification-school">Lycée Parc de Vilgénis - Massy</p>
-                        <p class="certification-description">Formation axée sur la
+                        <p class="certification-description" data-key="cert2_desc">Formation axée sur la
                             Conception et l'Administration de Bases de Données relationnelles, ainsi que sur la Création
                             de Sites Web Dynamiques. Le programme couvre également la gestion de projet informatique et
                             les besoins fonctionnels des organisations.</p>
@@ -634,9 +673,10 @@
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="certification-content">
-                        <h3>Développeur Solutions Web et Mobile</h3>
+                        <h3 data-key="cert3_title">Développeur Solutions Web et Mobile</h3>
                         <p class="certification-school">Coding Factory - 75015 PARIS</p>
-                        <p class="certification-description">Formation axée sur la Conception et l'Administration de
+                        <p class="certification-description" data-key="cert3_desc">Formation axée sur la Conception et
+                            l'Administration de
                             Bases de Données relationnelles, ainsi que sur la Création de Sites Web Dynamiques. Le
                             programme couvre également la gestion de projet informatique et les besoins fonctionnels des
                             organisations.</p>
@@ -662,7 +702,7 @@
 
             <!-- CTA Button -->
             <div class="certifications-cta">
-                <a href="certifications.html" class="btn primary btn-large">
+                <a href="certifications.html" class="btn primary btn-large" data-key="view_all_certs">
                     <i class="fas fa-th"></i> Voir mes certifications
                 </a>
             </div>
@@ -673,7 +713,7 @@
         <div class="container">
             <div class="contact-header">
                 <div class="contact-badge">
-                    <i class="fas fa-phone"></i> Restons en contact
+                    <i class="fas fa-phone"></i> <span data-key="contact_badge">Restons en contact</span>
                 </div>
             </div>
 
@@ -684,7 +724,7 @@
                         <i class="fab fa-github"></i>
                     </div>
                     <h3>GitHub</h3>
-                    <p>Découvrez mes projets open source</p>
+                    <p data-key="contact_github_desc">Découvrez mes projets open source</p>
                     <a href="https://github.com/Damien-Codes" class="contact-btn">Damien-Codes</a>
                 </div>
 
@@ -693,15 +733,15 @@
                         <i class="fas fa-envelope"></i>
                     </div>
                     <h3>Email</h3>
-                    <p>Contactez-moi directement par email</p>
+                    <p data-key="contact_email_desc">Contactez-moi directement par email</p>
                     <a href="mailto:pinodamien@gmail.com" class="contact-btn">pinodamien@gmail.com</a>
                 </div>
                 <div class="contact-card">
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
                     </div>
-                    <h3>Téléphone</h3>
-                    <p>Appelez-moi directement</p>
+                    <h3 data-key="contact_phone">Téléphone</h3>
+                    <p data-key="contact_phone_desc">Appelez-moi directement</p>
                     <a href="tel:0763678872" class="contact-btn">+33 7 83 67 88 72</a>
                 </div>
                 <div class="contact-card">
@@ -709,7 +749,7 @@
                         <i class="fab fa-linkedin"></i>
                     </div>
                     <h3>LinkedIn</h3>
-                    <p>Connectez-vous professionnellement</p>
+                    <p data-key="contact_linkedin_desc">Connectez-vous professionnellement</p>
                     <a href="https://www.linkedin.com/in/damien-pino/" class="contact-btn">Damien Pino</a>
                 </div>
                 <div class="contact-card">
@@ -717,7 +757,7 @@
                         <i class="fa fa-briefcase"></i>
                     </div>
                     <h3>Fiverr</h3>
-                    <p>Suivez mes projets de Freelanceur</p>
+                    <p data-key="contact_fiverr_desc">Suivez mes projets de Freelanceur</p>
                     <a href="https://fr.fiverr.com/devdamien?public_mode=true" class="contact-btn">Damien</a>
                 </div>
                 <div class="contact-card">
@@ -725,7 +765,8 @@
                         <i class="fab fa-instagram"></i>
                     </div>
                     <h3>Instagram</h3>
-                    <p>Contact direct pour les échanges professionnels ou collaborations.</p>
+                    <p data-key="contact_instagram_desc">Contact direct pour les échanges professionnels ou
+                        collaborations.</p>
                     <a href="https://www.instagram.com/skyll_box" class="contact-btn">@skyll_box</a>
                 </div>
             </div>
@@ -734,11 +775,13 @@
 
     <footer>
         <div class="container footer-content">
-            <p class="copyright">© 2025 Portfolio. Développé par <span class="footer-name"><a
-                        href="https://github.com/Damien-Codes" rel="noopener noreferrer">Damien-Codes</a></span></p>
+            <p class="copyright" data-key="footer_copyright">© 2025 Portfolio. Développé par <span
+                    class="footer-name"><a href="https://github.com/Damien-Codes"
+                        rel="noopener noreferrer">Damien-Codes</a></span></p>
         </div>
     </footer>
 
+    <script src="Assets/js/translations.js"></script>
     <script src="Assets/js/script.js"></script>
 </body>
 
